@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<body>
+    <main class="principal">
+        <div class="contenedor-lista">
+            <table class="lista2">
+
+                {% for p in canchas %}
+                <tr>
+                    <h3>{{ p.nombre }}</h3>
+                    <h4>{{ p.direccion }}</h4>
+                    <h4>${{ p.precio }}</h4>
+                </tr>
+    
+                {% endfor %}
+            </table>
+            <div class="contenedor-mapa">
+                <img src="../static/gestionTurnos/img/mapa.png" alt="Icono Menu">
+            </div>
+            <div class="centrado-boton">
+                <a class="boton" href="{% url 'Turnos' %}">Reservar</a>
+            </div>
+
+        </div>
+
+    </main>
+</body>
+
+{% endblock %}

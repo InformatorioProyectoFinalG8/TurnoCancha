@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+<body>
+    <main class="principal">
+        
+        </form>
+        <form class="centrado-turno2">
+            <div class="lista">
+                <table class="table table-dark">
+                    <tr>
+                        <th>Dia</th>
+                        <th>Horario</th>
+                        <th>Cancha</th>
+                    </tr>
+                    
+                    
+                    
+                    
+                    {% for p in mireserva %}
+                    <tr>
+                        <td>{{ p.dia }}</td>
+                        <td>
+                            {{ p.horario }}
+
+                        </td>
+                        <td>{{ p.cancha }}</td>
+                        <td> <a href="{% url 'Eliminar' p.id %}" class=" btn-primary btn btn-danger btn-lg">Eliminar</a></td>
+                    </tr>
+
+                    {% endfor %}
+                </table>
+                
+
+
+                
+            </div>
+        </form>
+
+    </main>
+</body>
+    
+
+{% endblock %}

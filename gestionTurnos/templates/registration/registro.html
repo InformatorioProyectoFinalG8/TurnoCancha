@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<body>
+    <main class="principal">
+        <form method="POST">
+            <div class="centrado-formulario">
+                {% csrf_token %}
+                {{ form | crispy }}
+        
+        
+                <input class="boton" type="submit" name="" value="Registrarse">  
+        
+        </form>
+
+    </main>
+</body>
+
+
+
+
+{% endblock %}

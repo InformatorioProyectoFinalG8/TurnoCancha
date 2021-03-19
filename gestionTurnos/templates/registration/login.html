@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<body>
+    <main class=" principal"> 
+        <form class="centrado-formulario" method="POST">
+            {% csrf_token %}
+            {{ form | crispy }}
+            <input type="submit" name="" value="Login">
+            <a class="fuente" href="{% url 'Registro' %}">NO TENGO UNA CUENTA</a>
+
+        </form>
+      
+    </main>    
+</body>
+
+
+{% endblock %}

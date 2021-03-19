@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<body>
+    <main class="principal">
+        
+            <form class="centrado-formulario" action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | crispy }}
+        
+                <div class="d-flex justify-content-center">
+                    <input class="boton" type="submit" value="Guardar">
+                    &nbsp;
+                    <input class="boton_cancelar" type="submit" value="Cancelar">
+                </div>
+            </form>
+        
+        
+    </main>
+</body>
+
+
+
+
+{% endblock %}

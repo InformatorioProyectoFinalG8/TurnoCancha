@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+ <body>
+    <main class="principal">
+        <div class="contenedor">
+            <h2>GRACIAS POR OCUPAR LA APP</h2>
+            <H2>Para ver tus turnos</h2>
+            <div class="centrado-boton">
+                    <a class="boton" href="{% url 'Usuario' %}">Mis turnos</a>
+            </div>
+        </div>
+    </main>
+ </body>
+
+{% endblock %}
+
+
